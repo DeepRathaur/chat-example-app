@@ -1,0 +1,42 @@
+<div class="row pt-2 pb-2">
+  <div class="col-sm-9">
+    <h4 class="page-title">Join Chat</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-10">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Chat Messages</div>
+        <hr>
+        <div  class="container"  *ngFor="let messages of message">
+          
+            <i class="fa fa-user" aria-hidden="true" style="font-size:30px;"></i><span class="textName">
+              {{messages.from}}</span><br />
+            <p>{{messages.text}}</p>
+            <span class="time-right">{{messages.createdAt | date:'short'}}</span>
+         </div>
+      </div>
+    </div>
+    <div class="card chat-footer">
+      <div class="row">
+        <div class="col-md-12">
+          <form>
+            <div class="form-group">
+              <label for="input-1">Message</label>
+              <input type="text" class="form-control" id="input-1" name="message" placeholder="type here"
+                [(ngModel)]="addData.message">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary shadow-primary px-5" (click)='createMessages()'><i
+                  class="icon-plus"></i> Send</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <app-right-sidebar></app-right-sidebar>

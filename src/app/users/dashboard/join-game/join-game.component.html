@@ -1,0 +1,28 @@
+<div class="row pt-2 pb-2">
+  <div class="col-sm-9">
+    <h4 class="page-title">Join Game</h4> 
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-8">
+    <div class="card" >
+      <div class="card-body">
+      <div class="card-title">Fill Form</div>
+      <hr>
+       <form>
+      <div class="form-group">
+       <label for="input-1">Display Name</label>
+       <input type="text" class="form-control" id="input-1" name="name" [(ngModel)] = "addData.name">
+      </div>
+      <div class="form-group">
+        <label for="input-1">Room Name</label>
+        <input type="text" class="form-control" id="input-1" name="room" [(ngModel)] = "addData.room">
+       </div>
+      <div class="form-group">
+       <button type="submit" class="btn btn-primary shadow-primary px-5" (click)="add()"><i class="icon-plus"></i> Join</button>         
+      </div>
+     </form>
+    </div>
+    </div>
+  </div>
+</div>

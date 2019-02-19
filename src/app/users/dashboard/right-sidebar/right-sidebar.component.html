@@ -1,0 +1,12 @@
+<div id="right-sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+
+    <ul class="sidebar-menu do-nicescrol">
+      <li class="sidebar-header"><h5>Active users</h5></li>
+      <li  *ngFor='let item of currentusers'>
+        <a class="waves-effect">
+          <i aria-hidden="true" class="fa fa-user"></i>
+          <span>{{item.name}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
